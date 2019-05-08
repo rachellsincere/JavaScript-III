@@ -37,7 +37,29 @@ mary.greet("Naromi");
 // Principle 3
 
 // code example for New Binding
+function Model(height, weight, age) {
+    this.height = height;
+    this.weight = weight;
+    this.age = age;
+  }
+  
+  let model1 = new Model('6 ft', ' 140 lbs', 22);
+  
+  console.log(model1.height);
 
 // Principle 4
 
 // code example for Explicit Binding
+let lavendar = {
+    type: 'flower',
+    sayType: function() {
+        console.log(`I am a ${this.type}`);
+    }
+
+};
+
+let dandelion = {
+    type: "weed"
+};
+
+lavendar.sayType.call(dandelion);
